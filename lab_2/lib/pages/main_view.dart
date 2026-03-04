@@ -3,6 +3,7 @@ import 'package:lab_2/widgets/difficulty_control.dart';
 import 'package:lab_2/widgets/ingredient_control.dart';
 import 'package:lab_2/widgets/kitchen_control.dart';
 import 'package:lab_2/widgets/price_control.dart';
+import 'package:lab_2/widgets/recipe_list.dart';
 import 'package:lab_2/widgets/time_control.dart';
 
 class MainView extends StatelessWidget {
@@ -49,7 +50,10 @@ class MainView extends StatelessWidget {
 
   Widget _recipeArea(context) {
     return Expanded(
-      child: Container(color: const Color.fromARGB(255, 204, 216, 176)),
+      child: Container(
+        color: const Color.fromARGB(255, 204, 216, 176),
+        child: RecipeList(),
+        ),
       );
   }
 }
