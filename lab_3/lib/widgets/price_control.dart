@@ -19,7 +19,11 @@ class _PriceControlState extends State<PriceControl> {
 
     return Column(
       children: [
-        const Text('MaxPris: '),
+        Row(
+          children: [
+            const Text('MaxPris: ', style: AppTheme.smallHeading),
+          ],
+        ),
         Slider(
           value: _price,
           divisions: 40,

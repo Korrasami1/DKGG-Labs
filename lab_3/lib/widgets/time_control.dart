@@ -21,7 +21,11 @@ class _TimeControlState extends State<TimeControl> {
 
     return Column(
       children: [
-        const Text('Maxtid: '),
+        Row(
+          children: [
+            const Text('Maxtid: ', style: AppTheme.smallHeading),
+          ],
+        ),
         Slider(
           value: _time,
           divisions: 10,

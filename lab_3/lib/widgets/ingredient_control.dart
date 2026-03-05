@@ -13,25 +13,28 @@ class IngredientControl extends StatelessWidget {
     const labels = MainIngredient.labels;
     final icons = MainIngredient.icons;
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Text('Ingredient: '),
-        SizedBox(width: AppTheme.paddingSmall),
-      DropdownMenu<String>(
-        width: 164,
-        enableFilter: false,
-        requestFocusOnTap: false,
-        initialSelection: labels[0],
-        dropdownMenuEntries: [
-          for (int i = 0; i < labels.length; i++)
-            DropdownMenuEntry(leadingIcon: icons[i], value: labels[i], label: labels[i]),
+    return Padding(
+      padding: const EdgeInsets.only(right: AppTheme.paddingHuge),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text('Ingredient: '),
+          SizedBox(width: AppTheme.paddingSmall),
+        DropdownMenu<String>(
+          width: 164,
+          enableFilter: false,
+          requestFocusOnTap: false,
+          initialSelection: labels[0],
+          dropdownMenuEntries: [
+            for (int i = 0; i < labels.length; i++)
+              DropdownMenuEntry(leadingIcon: icons[i], value: labels[i], label: labels[i]),
+          ],
+          onSelected: (value){
+            recipeHandler.setMainIngredient(value);
+          },
+        ),
         ],
-        onSelected: (value){
-          recipeHandler.setMainIngredient(value);
-        },
       ),
-      ],
     );
   }
 }

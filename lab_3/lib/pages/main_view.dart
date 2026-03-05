@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab_3/app_theme.dart';
 import 'package:lab_3/widgets/control_panel.dart';
 import 'package:lab_3/widgets/recipe_area.dart';
 
@@ -12,6 +13,7 @@ class MainView extends StatelessWidget {
       body: Row(
         children: [
           ControlPanel(),
+          Padding(padding: EdgeInsetsGeometry.all(AppTheme.paddingSmall)),
           RecipeArea(),
         ],
       ),
