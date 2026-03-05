@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         textTheme: AppTheme.textTheme,
       ),
       home: MainView(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

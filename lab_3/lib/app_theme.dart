@@ -28,4 +28,9 @@ class AppTheme {
     fontWeight: FontWeight.w500,
     letterSpacing: 0.15,
   );
+
+  static const TextStyle largeHeading = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.w400,
+  );
 }

@@ -19,21 +19,21 @@ class ControlPanel extends StatelessWidget {
         padding: const EdgeInsets.only(left: AppTheme.paddingMediumSmall),
         child: Column(
           children: [
-            Padding(padding: EdgeInsetsGeometry.all(10)),
+            Padding(padding: EdgeInsetsGeometry.all(AppTheme.paddingMediumSmall)),
             Logo(),
             const Text('Hitta ett recept som passar genom att ändra inställingarna nedanför \n'),
             IngredientControl(),
             KitchenControl(),
-            SizedBox(height: 10,),
+            SizedBox(height: AppTheme.paddingMediumSmall,),
             Row(
               children: [
                 const Text('Difficulty: ', style: AppTheme.smallHeading,),
               ],
             ),
             DifficultyControl(),
-            SizedBox(height: 10,),
+            SizedBox(height: AppTheme.paddingMediumSmall,),
             PriceControl(),
-            SizedBox(height: 10,),
+            SizedBox(height: AppTheme.paddingMediumSmall,),
             TimeControl(),
           ],
         ),
