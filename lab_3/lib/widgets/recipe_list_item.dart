@@ -20,7 +20,10 @@ class RecipeListItem extends StatelessWidget {
         height: 128,
         child: Row(
           children: [
-            _image(recipe),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: _image(recipe),
+            ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
