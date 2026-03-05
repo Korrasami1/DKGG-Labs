@@ -12,7 +12,7 @@ class AppTheme {
 
   // App color
   static ColorScheme colorScheme = ColorScheme.fromSeed(
-    seedColor: Colors.green, // Choose something that feels good
+    seedColor: Colors.orangeAccent, // Choose something that feels good
   );
 
   //App font

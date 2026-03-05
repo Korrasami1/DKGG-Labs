@@ -14,7 +14,6 @@ class ControlPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 320,
-      color: const Color.fromARGB(255, 193, 210, 218),
       child: Padding(
         padding: const EdgeInsets.only(left: AppTheme.paddingMediumSmall),
         child: Column(
