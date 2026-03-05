@@ -51,7 +51,7 @@ class MainView extends StatelessWidget {
   Widget _recipeArea(context) {
     return Expanded(
       child: Container(
-        color: const Color.fromARGB(255, 204, 216, 176),
+        //color: const Color.fromARGB(255, 204, 216, 176),
         child: RecipeList(),
         ),
       );

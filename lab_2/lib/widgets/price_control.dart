@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lab_2/model/recipe_database/recipe_handler.dart';
+import 'package:provider/provider.dart';
 
 class PriceControl extends StatefulWidget {
   const PriceControl({super.key});
@@ -12,6 +14,8 @@ class _PriceControlState extends State<PriceControl> {
 
   @override
   Widget build(BuildContext context) {
+    var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
+
     return Column(
       children: [
         Slider(
@@ -21,6 +25,7 @@ class _PriceControlState extends State<PriceControl> {
           onChanged: (double value) {
             setState(() {
               _price = value;
+              recipeHandler.setMaxPrice(_price.round());
             });
            
           },

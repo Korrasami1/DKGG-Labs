@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lab_2/model/recipe_database/recipe_handler.dart';
 import 'package:lab_2/util/difficulty.dart';
+import 'package:provider/provider.dart';
 
 class DifficultyControl extends StatefulWidget {
   const DifficultyControl({super.key});
@@ -13,11 +15,14 @@ class _DifficultyControlState extends State<DifficultyControl> {
 
   @override
   Widget build(BuildContext context) {
+    var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
+    
     return RadioGroup<String>(
       groupValue: _difficulty,
       onChanged: (value) {
         setState(() {
           _difficulty = value!;
+          recipeHandler.setDifficulty(_difficulty);
         });
       },
       child: Column(

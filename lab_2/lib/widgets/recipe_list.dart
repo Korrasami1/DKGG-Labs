@@ -16,7 +16,8 @@ class RecipeList extends StatelessWidget {
         for (var recipe in recipes)
           RecipeListItem(recipe, onTap:() {
             
-          }),
+          })
+         ,
         ],
     );
   }
