@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab_3/app_theme.dart';
 import 'package:lab_3/model/recipe_database/recipe_handler.dart';
 import 'package:lab_3/util/difficulty.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +13,9 @@ class DifficultyControl extends StatefulWidget {
 
 class _DifficultyControlState extends State<DifficultyControl> {
   String _difficulty = Difficulty.labels[0];
+
+  final labels = Difficulty.labels;
+  final icons = Difficulty.icons;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +31,11 @@ class _DifficultyControlState extends State<DifficultyControl> {
       },
       child: Column(
         children: [
-          for (final label in Difficulty.labels)
+          for (int i = 0; i < labels.length; i++) 
             RadioListTile<String>(
               dense: true,
-              title: Text(label),
-              value: label,
+              title: i == 0 ? Row( children: [SizedBox(width: AppTheme.paddingMedium), Text(labels[i])]): Row( children: [icons[i]!, SizedBox(width: AppTheme.paddingMedium), Text(labels[i])]) ,
+              value: labels[i],
             ),
         ],
       ),

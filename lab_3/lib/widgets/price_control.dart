@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab_3/app_theme.dart';
 import 'package:lab_3/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +19,7 @@ class _PriceControlState extends State<PriceControl> {
 
     return Column(
       children: [
+        const Text('MaxPris: '),
         Slider(
           value: _price,
           divisions: 40,
@@ -30,7 +32,13 @@ class _PriceControlState extends State<PriceControl> {
            
           },
         ),
-        Text('${_price.round()} kr'),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [Padding(
+            padding: const EdgeInsets.only(right: AppTheme.paddingLarge),
+            child: Text('${_price.round()} kr'),
+          )],
+        ),
       ],
     );
   }

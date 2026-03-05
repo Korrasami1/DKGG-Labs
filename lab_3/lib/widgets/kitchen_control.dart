@@ -25,7 +25,7 @@ class KitchenControl extends StatelessWidget {
           initialSelection: labels[0],
           dropdownMenuEntries: [
             for (int i = 0; i < labels.length; i++)
-              DropdownMenuEntry(leadingIcon: icons[i],value: labels[i], label: labels[i]),
+              DropdownMenuEntry(leadingIcon: icons[i], value: labels[i], label: labels[i]),
           ],
           onSelected: (value){
             recipeHandler.setCuisine(value);

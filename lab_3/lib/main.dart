@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lab_3/app_theme.dart';
 import 'package:lab_3/model/recipe_database/recipe_handler.dart';
 import 'package:lab_3/pages/main_view.dart';
